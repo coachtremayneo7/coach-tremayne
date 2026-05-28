@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Coach TreMayne | Fit Over 40 · Travel Coaching&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">  :root {</p>
+<p class="p1">    --gold: #C9A84C;</p>
+<p class="p1">    --gold-light: #E2C472;</p>
+<p class="p1">    --gold-dim: rgba(201,168,76,0.12);</p>
+<p class="p1">    --gold-border: rgba(201,168,76,0.3);</p>
+<p class="p1">    --black: #080808;</p>
+<p class="p1">    --dark: #0d0d0d;</p>
+<p class="p1">    --card: #111111;</p>
+<p class="p1">    --border: #1e1e1e;</p>
+<p class="p1">    --text: #e0e0e0;</p>
+<p class="p1">    --muted: #555;</p>
+<p class="p1">  }</p>
+<p class="p1">  * { box-sizing: border-box; margin: 0; padding: 0; }</p>
+<p class="p1">  html { scroll-behavior: smooth; }</p>
+<p class="p1">  body { background: var(--black); color: var(--text); font-family: 'Arial', sans-serif; min-height: 100vh; }</p>
+<p class="p1">  ::-webkit-scrollbar { width: 4px; }</p>
+<p class="p1">  ::-webkit-scrollbar-track { background: #0a0a0a; }</p>
+<p class="p1">  ::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }</p>
+<p class="p2"><br></p>
+<p class="p1">  nav {</p>
+<p class="p1">    position: sticky; top: 0; z-index: 100;</p>
+<p class="p1">    background: rgba(8,8,8,0.92); backdrop-filter: blur(16px);</p>
+<p class="p1">    border-bottom: 1px solid var(--border);</p>
+<p class="p1">    padding: 14px 28px; display: flex; align-items: center; justify-content: space-between;</p>
+<p class="p1">  }</p>
+<p class="p1">  .nav-logo { display: flex; align-items: center; gap: 10px; }</p>
+<p class="p1">  .nav-icon {</p>
+<p class="p1">    width: 34px; height: 34px; border-radius: 50%;</p>
+<p class="p1">    background: linear-gradient(135deg, var(--gold), var(--gold-light));</p>
+<p class="p1">    display: flex; align-items: center; justify-content: center; font-size: 16px;</p>
+<p class="p1">    box-shadow: 0 0 14px rgba(201,168,76,0.3);</p>
+<p class="p1">  }</p>
+<p class="p1">  .nav-brand { font-family: 'Arial Black', 'Impact', sans-serif; font-size: 20px; letter-spacing: 0.1em; color: #fff; }</p>
+<p class="p1">  .nav-brand span { color: var(--gold); }</p>
+<p class="p1">  .nav-links { display: flex; gap: 28px; align-items: center; }</p>
+<p class="p1">  .nav-links a { color: var(--muted); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: color 0.2s; font-weight: 600; }</p>
+<p class="p1">  .nav-links a:hover { color: var(--gold); }</p>
+<p class="p1">  .btn-nav {</p>
+<p class="p1">    background: linear-gradient(135deg, var(--gold), var(--gold-light));</p>
+<p class="p1">    color: #000; border: none; padding: 9px 20px;</p>
+<p class="p1">    font-family: 'Arial Narrow', 'Arial', sans-serif; font-size: 13px; font-weight: 700;</p>
+<p class="p1">    letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;</p>
+<p class="p1">    transition: all 0.2s; border-radius: 2px;</p>
+<p class="p1">  }</p>
+<p class="p1">  .btn-nav:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,168,76,0.3); }</p>
+<p class="p2"><br></p>
+<p class="p1">  section { padding: 80px 24px; }</p>
+<p class="p2"><br></p>
+<p class="p1">  .hero {</p>
+<p class="p1">    min-height: calc(100vh - 62px);</p>
+<p class="p1">    display: flex; align-items: center; justify-content: center;</p>
+<p class="p1">    text-align: center; position: relative; overflow: hidden; padding: 60px 24px;</p>
+<p class="p1">  }</p>
+<p class="p1">  .hero-glow {</p>
+<p class="p1">    position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);</p>
+<p class="p1">    width: 700px; height: 700px; border-radius: 50%;</p>
+<p class="p1">    background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);</p>
+<p class="p1">    pointer-events: none;</p>
+<p class="p1">  }</p>
+<p class="p1">  .hero-tag {</p>
+<p class="p1">    display: inline-block; background: var(--gold-dim); border: 1px solid var(--gold-border);</p>
+<p class="p1">    padding: 5px 20px; margin-bottom: 24px; border-radius: 1px;</p>
+<p class="p1">    font-size: 11px; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600;</p>
+<p class="p1">  }</p>
+<p class="p1">  .hero h1 { font-family: 'Arial Black', 'Impact', sans-serif; font-size: clamp(64px, 12vw, 110px); line-height: 0.95; letter-spacing: 0.02em; color: #fff; margin-bottom: 24px; }</p>
+<p class="p1">  .hero h1 .gold { color: var(--gold); text-shadow: 0 0 40px rgba(201,168,76,0.4); }</p>
+<p class="p1">  .gold-line { width: 60px; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); margin: 0 auto 24px; }</p>
+<p class="p1">  .hero p { color: var(--muted); font-size: clamp(15px, 2vw, 17px); line-height: 1.8; max-width: 480px; margin: 0 auto 40px; }</p>
+<p class="p1">  .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }</p>
+<p class="p1">  .btn-primary {</p>
+<p class="p1">    background: linear-gradient(135deg, var(--gold), var(--gold-light));</p>
+<p class="p1">    color: #000; border: none; padding: 16px 36px;</p>
+<p class="p1">    font-family: 'Arial Narrow', 'Arial', sans-serif; font-size: 15px; font-weight: 700;</p>
+<p class="p1">    letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;</p>
+<p class="p1">    transition: all 0.2s; border-radius: 2px;</p>
+<p class="p1">  }</p>
+<p class="p1">  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(201,168,76,0.35); }</p>
+<p class="p1">  .btn-outline {</p>
+<p class="p1">    background: transparent; color: var(--gold); border: 2px solid var(--gold);</p>
+<p class="p1">    padding: 14px 32px; font-family: 'Arial Narrow', 'Arial', sans-serif; font-size: 15px; font-weight: 700;</p>
+<p class="p1">    letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;</p>
+<p class="p1">    transition: all 0.2s; border-radius: 2px; text-decoration: none; display: inline-block;</p>
+<p class="p1">  }</p>
+<p class="p1">  .btn-outline:hover { background: var(--gold-dim); transform: translateY(-2px); }</p>
+<p class="p2"><br></p>
+<p class="p1">  .stats { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 40px 24px; }</p>
+<p class="p1">  .stats-grid { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; text-align: center; }</p>
+<p class="p1">  .stat-val { font-family: 'Arial Black', 'Impact', sans-serif; font-size: clamp(40px,6vw,60px); color: var(--gold); }</p>
+<p class="p1">  .stat-label { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; font-weight: 600; }</p>
+<p class="p2"><br></p>
+<p class="p1">  .ai-section { background: #050505; border-top: 1px solid var(--border); }</p>
+<p class="p1">  .ai-grid { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }</p>
+<p class="p1">  .section-tag { display: inline-block; background: var(--gold-dim); border: 1px solid var(--gold-border); padding: 5px 16px; margin-bottom: 20px; border-radius: 1px; font-size: 11px; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; }</p>
+<p class="p1">  .section-title { font-family: 'Arial Black', 'Impact', sans-serif; font-size: clamp(36px,5vw,54px); line-height: 1.0; letter-spacing: 0.03em; color: #fff; margin-bottom: 16px; }</p>
+<p class="p1">  .section-title .gold { color: var(--gold); }</p>
+<p class="p1">  .divider { width: 40px; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); margin-bottom: 20px; }</p>
+<p class="p1">  .section-text { color: var(--muted); font-size: 15px; line-height: 1.8; margin-bottom: 24px; }</p>
+<p class="p1">  .feature-list { list-style: none; margin-bottom: 32px; }</p>
+<p class="p1">  .feature-list li { color: var(--muted); font-size: 14px; line-height: 2.2; border-bottom: 1px solid var(--border); padding-bottom: 4px; font-weight: 500; }</p>
+<p class="p2"><br></p>
+<p class="p1">  #ai-tool { background: var(--black); }</p>
+<p class="p1">  .tool-wrap { max-width: 720px; margin: 0 auto; }</p>
+<p class="p1">  .tool-header { text-align: center; margin-bottom: 32px; }</p>
+<p class="p1">  .tool-card { background: var(--card); border: 1px solid rgba(201,168,76,0.15); border-radius: 4px; padding: 28px 24px; }</p>
+<p class="p1">  .mode-tabs { display: grid; grid-template-columns: repeat(4,1fr); gap: 6px; margin-bottom: 20px; }</p>
+<p class="p1">  .mode-tab {</p>
+<p class="p1">    background: var(--dark); border: 1.5px solid var(--border); border-radius: 4px;</p>
+<p class="p1">    padding: 10px 4px; cursor: pointer; text-align: center; transition: all 0.2s;</p>
+<p class="p1">    color: var(--muted); font-family: 'Arial Narrow', 'Arial', sans-serif;</p>
+<p class="p1">  }</p>
+<p class="p1">  .mode-tab:hover { border-color: var(--gold-border); color: var(--gold); }</p>
+<p class="p1">  .mode-tab.active { background: var(--gold-dim); border-color: var(--gold); color: var(--gold); }</p>
+<p class="p1">  .mode-tab .tab-icon { font-size: 18px; display: block; margin-bottom: 3px; }</p>
+<p class="p1">  .mode-tab .tab-label { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }</p>
+<p class="p1">  .chat-area { min-height: 260px; max-height: 380px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; padding-right: 4px; }</p>
+<p class="p1">  .chat-empty { text-align: center; padding: 40px 16px; }</p>
+<p class="p1">  .chat-empty .empty-icon { font-size: 36px; margin-bottom: 12px; }</p>
+<p class="p1">  .chat-empty p { font-size: 13px; color: #333; line-height: 1.6; }</p>
+<p class="p1">  .msg { display: flex; animation: fadeUp 0.3s ease; }</p>
+<p class="p1">  .msg.user { justify-content: flex-end; }</p>
+<p class="p1">  .msg.ai { justify-content: flex-start; }</p>
+<p class="p1">  .ai-avatar {</p>
+<p class="p1">    width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;</p>
+<p class="p1">    background: linear-gradient(135deg, var(--gold), var(--gold-light));</p>
+<p class="p1">    display: flex; align-items: center; justify-content: center;</p>
+<p class="p1">    font-size: 12px; margin-right: 8px; margin-top: 2px;</p>
+<p class="p1">  }</p>
+<p class="p1">  .msg-bubble { max-width: 80%; padding: 11px 15px; font-size: 14px; line-height: 1.65; white-space: pre-wrap; font-family: 'Arial', sans-serif; }</p>
+<p class="p1">  .msg.user .msg-bubble { background: var(--gold-dim); border: 1px solid var(--gold-border); border-radius: 14px 3px 14px 14px; color: #ddd; }</p>
+<p class="p1">  .msg.ai .msg-bubble { background: #161616; border: 1px solid var(--border); border-radius: 3px 14px 14px 14px; color: #bbb; }</p>
+<p class="p1">  .typing-bubble { background: #161616; border: 1px solid var(--border); border-radius: 3px 14px 14px 14px; padding: 11px 16px; display: flex; gap: 5px; align-items: center; }</p>
+<p class="p1">  .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); animation: pulse 1.5s ease-in-out infinite; }</p>
+<p class="p1">  .dot:nth-child(2) { animation-delay: 0.2s; }</p>
+<p class="p1">  .dot:nth-child(3) { animation-delay: 0.4s; }</p>
+<p class="p1">  .chat-input-wrap { display: flex; gap: 8px; background: var(--dark); border: 1px solid #2a2a2a; border-radius: 4px; padding: 8px 8px 8px 16px; align-items: flex-end; }</p>
+<p class="p1">  #chat-input { flex: 1; background: transparent; border: none; outline: none; color: var(--text); font-size: 14px; line-height: 1.5; resize: none; font-family: 'Arial', sans-serif; padding-top: 4px; max-height: 100px; overflow-y: auto; }</p>
+<p class="p1">  #chat-input::placeholder { color: #333; }</p>
+<p class="p1">  #send-btn { width: 38px; height: 38px; border-radius: 4px; border: none; flex-shrink: 0; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #000; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.15s; font-weight: 700; }</p>
+<p class="p1">  #send-btn:disabled { background: #1a1a1a; color: #333; cursor: not-allowed; }</p>
+<p class="p1">  #send-btn:not(:disabled):hover { transform: scale(1.05); }</p>
+<p class="p2"><br></p>
+<p class="p1">  .services { background: #050505; border-top: 1px solid var(--border); }</p>
+<p class="p1">  .section-header { text-align: center; margin-bottom: 52px; }</p>
+<p class="p1">  .section-header .gold-line { margin: 16px auto 12px; }</p>
+<p class="p1">  .section-subtitle { color: var(--muted); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; }</p>
+<p class="p1">  .services-grid { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 16px; }</p>
+<p class="p1">  .service-card { background: var(--card); border: 1px solid var(--border); border-radius: 2px; padding: 32px 24px; transition: all 0.2s; }</p>
+<p class="p1">  .service-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-3px); }</p>
+<p class="p1">  .service-icon { font-size: 30px; margin-bottom: 16px; }</p>
+<p class="p1">  .service-name { font-family: 'Arial Narrow', 'Arial', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; color: #fff; }</p>
+<p class="p1">  .service-desc { color: var(--muted); font-size: 14px; line-height: 1.7; margin-bottom: 16px; }</p>
+<p class="p1">  .service-price { color: var(--gold); font-weight: 700; font-size: 15px; margin-bottom: 20px; letter-spacing: 0.06em; font-family: 'Arial Narrow', 'Arial', sans-serif; }</p>
+<p class="p1">  .btn-service { width: 100%; background: transparent; color: var(--gold); border: 1.5px solid var(--gold); padding: 11px; font-family: 'Arial Narrow', 'Arial', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; border-radius: 2px; }</p>
+<p class="p1">  .btn-service:hover { background: var(--gold-dim); }</p>
+<p class="p2"><br></p>
+<p class="p1">  .payment { border-top: 1px solid var(--border); }</p>
+<p class="p1">  .payment-wrap { max-width: 600px; margin: 0 auto; text-align: center; }</p>
+<p class="p1">  .payment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0 28px; }</p>
+<p class="p1">  .pay-card { background: var(--card); border: 1px solid var(--border); border-radius: 2px; padding: 32px 20px; text-align: center; transition: all 0.2s; text-decoration: none; display: block; }</p>
+<p class="p1">  .pay-card:hover { transform: translateY(-3px); }</p>
+<p class="p1">  .pay-card.cashapp { border-color: rgba(0,214,50,0.2); }</p>
+<p class="p1">  .pay-card.cashapp:hover { border-color: rgba(0,214,50,0.4); }</p>
+<p class="p1">  .pay-card.venmo { border-color: rgba(0,140,255,0.2); }</p>
+<p class="p1">  .pay-card.venmo:hover { border-color: rgba(0,140,255,0.4); }</p>
+<p class="p1">  .pay-logo { width: 52px; height: 52px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px; }</p>
+<p class="p1">  .pay-logo.cashapp { background: #00D632; }</p>
+<p class="p1">  .pay-logo.venmo { background: #008CFF; }</p>
+<p class="p1">  .pay-name { font-family: 'Arial Narrow', 'Arial', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }</p>
+<p class="p1">  .pay-name.cashapp { color: #00D632; }</p>
+<p class="p1">  .pay-name.venmo { color: #008CFF; }</p>
+<p class="p1">  .pay-handle { font-size: 17px; font-weight: 600; color: #fff; margin-bottom: 6px; font-family: 'Arial Narrow', 'Arial', sans-serif; }</p>
+<p class="p1">  .pay-cta { font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }</p>
+<p class="p1">  .pay-note { background: var(--gold-dim); border: 1px solid var(--gold-border); border-radius: 2px; padding: 16px 20px; font-size: 13px; color: var(--muted); line-height: 1.7; text-align: left; }</p>
+<p class="p1">  .pay-note strong { color: var(--gold); }</p>
+<p class="p2"><br></p>
+<p class="p1">  .cta-banner { background: #050505; border-top: 1px solid var(--border); text-align: center; }</p>
+<p class="p1">  .cta-banner h2 { font-family: 'Arial Black', 'Impact', sans-serif; font-size: clamp(36px,6vw,64px); line-height: 1.0; letter-spacing: 0.03em; margin-bottom: 16px; }</p>
+<p class="p1">  .cta-banner p { color: var(--muted); font-size: 15px; line-height: 1.8; max-width: 480px; margin: 0 auto 36px; }</p>
+<p class="p1">  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }</p>
+<p class="p2"><br></p>
+<p class="p1">  footer { border-top: 1px solid var(--border); padding: 28px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }</p>
+<p class="p1">  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }</p>
+<p class="p1">  .footer-links a { color: #333; font-size: 11px; letter-spacing: 0.08em; text-decoration: none; text-transform: uppercase; font-weight: 600; transition: color 0.2s; }</p>
+<p class="p1">  .footer-links a:hover { color: var(--gold); }</p>
+<p class="p1">  .footer-copy { color: #222; font-size: 11px; }</p>
+<p class="p2"><br></p>
+<p class="p1">  @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }</p>
+<p class="p1">  @keyframes pulse { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }</p>
+<p class="p1">  @media (max-width: 700px) { .ai-grid { grid-template-columns: 1fr; } .nav-links a { display: none; } footer { flex-direction: column; text-align: center; } .payment-grid { grid-template-columns: 1fr; } }</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;nav&gt;</p>
+<p class="p1">  &lt;div class="nav-logo"&gt;</p>
+<p class="p1">    &lt;div class="nav-icon"&gt;⚡&lt;/div&gt;</p>
+<p class="p1">    &lt;div class="nav-brand"&gt;Coach &lt;span&gt;TreMayne&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1">  &lt;/div&gt;</p>
+<p class="p1">  &lt;div class="nav-links"&gt;</p>
+<p class="p1">    &lt;a href="#hero"&gt;Home&lt;/a&gt;</p>
+<p class="p1">    &lt;a href="#services"&gt;Services&lt;/a&gt;</p>
+<p class="p1">    &lt;a href="#pay"&gt;Pay&lt;/a&gt;</p>
+<p class="p1">    &lt;button class="btn-nav" onclick="document.getElementById('ai-tool').scrollIntoView({behavior:'smooth'})"&gt;AI Tool ⚡&lt;/button&gt;</p>
+<p class="p1">  &lt;/div&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="hero" id="hero"&gt;</p>
+<p class="p1">  &lt;div class="hero-glow"&gt;&lt;/div&gt;</p>
+<p class="p1">  &lt;div style="position:relative; max-width:720px;"&gt;</p>
+<p class="p1">    &lt;div class="hero-tag"&gt;Coach TreMayne · Fit Over 40 · Travel Coaching&lt;/div&gt;</p>
+<p class="p1">    &lt;h1&gt;Stay &lt;span class="gold"&gt;Fit&lt;/span&gt;&lt;br&gt;On The Road.&lt;/h1&gt;</p>
+<p class="p1">    &lt;div class="gold-line"&gt;&lt;/div&gt;</p>
+<p class="p1">    &lt;p&gt;The only coaching program built for busy professionals 40+ who travel for work and refuse to let the road kill their results.&lt;/p&gt;</p>
+<p class="p1">    &lt;div class="hero-btns"&gt;</p>
+<p class="p1">      &lt;button class="btn-primary" onclick="document.getElementById('ai-tool').scrollIntoView({behavior:'smooth'})"&gt;Try AI Coach Free&lt;/button&gt;</p>
+<p class="p1">      &lt;a href="https://linktr.ee/CoachTreMayne" target="_blank" class="btn-outline"&gt;Apply for Coaching&lt;/a&gt;</p>
+<p class="p1">    &lt;/div&gt;</p>
+<p class="p1">  &lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="stats"&gt;</p>
+<p class="p1">  &lt;div class="stats-grid"&gt;</p>
+<p class="p1">    &lt;div&gt;&lt;div class="stat-val"&gt;40+&lt;/div&gt;&lt;div class="stat-label"&gt;Age Group Served&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1">    &lt;div&gt;&lt;div class="stat-val"&gt;100%&lt;/div&gt;&lt;div class="stat-label"&gt;Travel Focused&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1">    &lt;div&gt;&lt;div class="stat-val"&gt;1:1&lt;/div&gt;&lt;div class="stat-label"&gt;Personal Coaching&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1">  &lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="ai-section"&gt;</p>
+<p class="p1">  &lt;div class="ai-grid"&gt;</p>
+<p class="p1">    &lt;div&gt;</p>
+<p class="p1">      &lt;div class="section-tag"&gt;⚡ Powered by Claude AI&lt;/div&gt;</p>
+<p class="p1">      &lt;h2 class="section-title"&gt;Your Coach.&lt;br&gt;&lt;span class="gold"&gt;Always On.&lt;/span&gt;&lt;/h2&gt;</p>
+<p class="p1">      &lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p1">      &lt;p class="section-text"&gt;Get instant workout plans, ask fitness questions, onboard as a new client, or generate Instagram content — powered by AI trained in Coach TreMayne's methods.&lt;/p&gt;</p>
+<p class="p1">      &lt;ul class="feature-list"&gt;</p>
+<p class="p1">        &lt;li&gt;🏋️ &amp;nbsp;Custom workout plans in seconds&lt;/li&gt;</p>
+<p class="p1">        &lt;li&gt;💬 &amp;nbsp;24/7 fitness &amp; nutrition Q&amp;A&lt;/li&gt;</p>
+<p class="p1">        &lt;li&gt;🚀 &amp;nbsp;Instant client onboarding&lt;/li&gt;</p>
+<p class="p1">        &lt;li&gt;📲 &amp;nbsp;Instagram captions &amp; hashtags&lt;/li&gt;</p>
+<p class="p1">      &lt;/ul&gt;</p>
+<p class="p1">      &lt;button class="btn-primary" onclick="document.getElementById('ai-tool').scrollIntoView({behavior:'smooth'})"&gt;Launch AI Tool →&lt;/button&gt;</p>
+<p class="p1">    &lt;/div&gt;</p>
+<p class="p1">    &lt;div style="background:#0a0a0a; border:1px solid rgba(201,168,76,0.15); border-radius:4px; padding:20px 18px;"&gt;</p>
+<p class="p1">      &lt;div style="display:grid; grid-template-columns:repeat(4,1fr); gap:5px; margin-bottom:16px;"&gt;</p>
+<p class="p1">        &lt;div style="background:var(--gold-dim); border:1px solid var(--gold-border); border-radius:4px; padding:8px 4px; text-align:center;"&gt;&lt;div style="font-size:14px;"&gt;🏋️&lt;/div&gt;&lt;div style="font-size:9px; color:var(--gold); font-weight:700; text-transform:uppercase; margin-top:3px; font-family:'Barlow Condensed',sans-serif;"&gt;Workout&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1">        &lt;div style="background:#111; border:1px solid #1e1e1e; border-radius:4px; padding:8px 4px; text-align:center;"&gt;&lt;div style="font-size:14px;"&gt;💬&lt;/div&gt;&lt;div style="font-size:9px; color:#444; font-weight:700; text-transform:uppercase; margin-top:3px; font-family:'Barlow Condensed',sans-serif;"&gt;Ask Coach&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1">        &lt;div style="background:#111; border:1px solid #1e1e1e; border-radius:4px; padding:8px 4px; text-align:center;"&gt;&lt;div style="font-size:14px;"&gt;🚀&lt;/div&gt;&lt;div style="font-size:9px; color:#444; font-weight:700; text-transform:uppercase; margin-top:3px; font-family:'Barlow Condensed',sans-serif;"&gt;Onboard&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1">        &lt;div style="background:#111; border:1px solid #1e1e1e; border-radius:4px; padding:8px 4px; text-align:center;"&gt;&lt;div style="font-size:14px;"&gt;📲&lt;/div&gt;&lt;div style="font-size:9px; color:#444; font-weight:700; text-transform:uppercase; margin-top:3px; font-family:'Barlow Condensed',sans-serif;"&gt;Content&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1">      &lt;/div&gt;</p>
+<p class="p1">      &lt;div style="display:flex; justify-content:flex-end; margin-bottom:10px;"&gt;</p>
+<p class="p1">        &lt;div style="max-width:85%; padding:10px 13px; font-size:12px; line-height:1.6; background:var(--gold-dim); border:1px solid var(--gold-border); border-radius:12px 3px 12px 12px; color:#ccc; font-family:'Barlow',sans-serif;"&gt;Hotel room workout, 20 mins, no equipment&lt;/div&gt;</p>
+<p class="p1">      &lt;/div&gt;</p>
+<p class="p1">      &lt;div style="display:flex; align-items:flex-start;"&gt;</p>
+<p class="p1">        &lt;div style="width:22px; height:22px; border-radius:50%; background:linear-gradient(135deg,var(--gold),var(--gold-light)); display:flex; align-items:center; justify-content:center; font-size:11px; margin-right:7px; flex-shrink:0; margin-top:2px;"&gt;⚡&lt;/div&gt;</p>
+<p class="p1">        &lt;div style="max-width:85%; padding:10px 13px; font-size:12px; line-height:1.65; background:#161616; border:1px solid #1e1e1e; border-radius:3px 12px 12px 12px; color:#999; font-family:'Barlow',sans-serif; white-space:pre-wrap;"&gt;Hotel Hustle Circuit:</p>
+<p class="p2"><br></p>
+<p class="p1">🔥 Warm-Up: Jumping jacks</p>
+<p class="p2"><br></p>
+<p class="p1">💪 3 Rounds:</p>
+<p class="p1">• 15 Push-ups</p>
+<p class="p1">• 20 Squats  </p>
+<p class="p1">• 30s Plank</p>
+<p class="p2"><br></p>
+<p class="p1">— Coach TreMayne&lt;/div&gt;</p>
+<p class="p1">      &lt;/div&gt;</p>
+<p class="p1">    &lt;/div&gt;</p>
+<p class="p1">  &lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="ai-tool"&gt;</p>
+<p class="p1">  &lt;div class="tool-wrap"&gt;</p>
+<p class="p1">    &lt;div class="tool-header"&gt;</p>
+<p class="p1">      &lt;div class="section-tag"&gt;⚡ Powered by Claude AI&lt;/div&gt;</p>
+<p class="p1">      &lt;h2 class="section-title"&gt;Coach &lt;span class="gold"&gt;TreMayne&lt;/span&gt; AI&lt;/h2&gt;</p>
+<p class="p1">      &lt;div class="gold-line"&gt;&lt;/div&gt;</p>
+<p class="p1">      &lt;p style="color:var(--muted); font-size:13px; letter-spacing:0.08em; text-transform:uppercase; font-weight:600;"&gt;Your 24/7 Fitness &amp; Travel Coach&lt;/p&gt;</p>
+<p class="p1">    &lt;/div&gt;</p>
+<p class="p1">    &lt;div class="tool-card"&gt;</p>
+<p class="p1">      &lt;div class="mode-tabs"&gt;</p>
+<p class="p1">        &lt;button class="mode-tab active" onclick="setMode('workout',this)"&gt;&lt;span class="tab-icon"&gt;🏋️&lt;/span&gt;&lt;span class="tab-label"&gt;Workout Plan&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1">        &lt;button class="mode-tab" onclick="setMode('qa',this)"&gt;&lt;span class="tab-icon"&gt;💬&lt;/span&gt;&lt;span class="tab-label"&gt;Ask Coach&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1">        &lt;button class="mode-tab" onclick="setMode('onboard',this)"&gt;&lt;span class="tab-icon"&gt;🚀&lt;/span&gt;&lt;span class="tab-label"&gt;New Client&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1">        &lt;button class="mode-tab" onclick="setMode('content',this)"&gt;&lt;span class="tab-icon"&gt;📲&lt;/span&gt;&lt;span class="tab-label"&gt;Content&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1">      &lt;/div&gt;</p>
+<p class="p1">      &lt;div class="chat-area" id="chat-area"&gt;</p>
+<p class="p1">        &lt;div class="chat-empty" id="chat-empty"&gt;</p>
+<p class="p1">          &lt;div class="empty-icon"&gt;🏋️&lt;/div&gt;</p>
+<p class="p1">          &lt;p id="empty-text"&gt;Describe your goal, equipment, time &amp; level&lt;/p&gt;</p>
+<p class="p1">        &lt;/div&gt;</p>
+<p class="p1">      &lt;/div&gt;</p>
+<p class="p1">      &lt;div class="chat-input-wrap"&gt;</p>
+<p class="p1">        &lt;textarea id="chat-input" rows="2" placeholder="e.g. Full body, no equipment, 30 mins, intermediate..."&gt;&lt;/textarea&gt;</p>
+<p class="p1">        &lt;button id="send-btn" disabled onclick="sendMessage()"&gt;↑&lt;/button&gt;</p>
+<p class="p1">      &lt;/div&gt;</p>
+<p class="p1">    &lt;/div&gt;</p>
+<p class="p1">    &lt;div style="text-align:center; margin-top:14px; font-size:12px; color:#2a2a2a;"&gt;</p>
+<p class="p1">      &lt;a href="https://linktr.ee/CoachTreMayne" target="_blank" style="color:var(--gold); text-decoration:none;"&gt;linktr.ee/CoachTreMayne&lt;/a&gt; · Book your free 20-min discovery call</p>
+<p class="p1">    &lt;/div&gt;</p>
+<p class="p1">  &lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="services" id="services"&gt;</p>
+<p class="p1">  &lt;div class="section-header"&gt;</p>
+<p class="p1">    &lt;h2 class="section-title"&gt;Ready to &lt;span class="gold"&gt;Level Up?&lt;/span&gt;&lt;/h2&gt;</p>
+<p class="p1">    &lt;div class="gold-line"&gt;&lt;/div&gt;</p>
+<p class="p1">    &lt;p class="section-subtitle"&gt;Choose your path. Let's get to work.&lt;/p&gt;</p>
+<p class="p1">  &lt;/div&gt;</p>
+<p class="p1">  &lt;div class="services-grid"&gt;</p>
+<p class="p1">    &lt;div class="service-card"&gt;&lt;div class="service-icon"&gt;🎯&lt;/div&gt;&lt;div class="service-name"&gt;1-on-1 Coaching&lt;/div&gt;&lt;p class="service-desc"&gt;Fully personalized training &amp; nutrition plan tailored to your goals and lifestyle.&lt;/p&gt;&lt;div class="service-price"&gt;DM for pricing&lt;/div&gt;&lt;a href="https://linktr.ee/CoachTreMayne" target="_blank"&gt;&lt;button class="btn-service"&gt;Get Started →&lt;/button&gt;&lt;/a&gt;&lt;/div&gt;</p>
+<p class="p1">    &lt;div class="service-card"&gt;&lt;div class="service-icon"&gt;✈️&lt;/div&gt;&lt;div class="service-name"&gt;Travel Fit Program&lt;/div&gt;&lt;p class="service-desc"&gt;Train anywhere in the world — hotels, parks, beaches. No excuses, just results.&lt;/p&gt;&lt;div class="service-price"&gt;DM for pricing&lt;/div&gt;&lt;a href="https://linktr.ee/CoachTreMayne" target="_blank"&gt;&lt;button class="btn-service"&gt;Get Started →&lt;/button&gt;&lt;/a&gt;&lt;/div&gt;</p>
+<p class="p1">    &lt;div class="service-card"&gt;&lt;div class="service-icon"&gt;🎁&lt;/div&gt;&lt;div class="service-name"&gt;Free Workout Plan&lt;/div&gt;&lt;p class="service-desc"&gt;Get your starter plan instantly. No commitment required.&lt;/p&gt;&lt;div class="service-price"&gt;FREE&lt;/div&gt;&lt;a href="https://linktr.ee/CoachTreMayne" target="_blank"&gt;&lt;button class="btn-service"&gt;Get Started →&lt;/button&gt;&lt;/a&gt;&lt;/div&gt;</p>
+<p class="p1">  &lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="payment" id="pay"&gt;</p>
+<p class="p1">  &lt;div class="payment-wrap"&gt;</p>
+<p class="p1">    &lt;h2 class="section-title"&gt;Ready to &lt;span class="gold"&gt;Pay &amp; Start?&lt;/span&gt;&lt;/h2&gt;</p>
+<p class="p1">    &lt;div class="gold-line" style="margin:16px auto 0;"&gt;&lt;/div&gt;</p>
+<p class="p1">    &lt;p style="color:var(--muted); font-size:14px; margin-top:20px; line-height:1.8;"&gt;After your discovery call, send payment via Cash App or Venmo. Include your name &amp; program in the note.&lt;/p&gt;</p>
+<p class="p1">    &lt;div class="payment-grid"&gt;</p>
+<p class="p1">      &lt;a href="https://cash.app/$CoachTreMayne" target="_blank" class="pay-card cashapp"&gt;&lt;div class="pay-logo cashapp"&gt;💵&lt;/div&gt;&lt;div class="pay-name cashapp"&gt;Cash App&lt;/div&gt;&lt;div class="pay-handle"&gt;$CoachTreMayne&lt;/div&gt;&lt;div class="pay-cta"&gt;Tap to Pay&lt;/div&gt;&lt;/a&gt;</p>
+<p class="p1">      &lt;a href="https://venmo.com/CoachTreMayne" target="_blank" class="pay-card venmo"&gt;&lt;div class="pay-logo venmo"&gt;💙&lt;/div&gt;&lt;div class="pay-name venmo"&gt;Venmo&lt;/div&gt;&lt;div class="pay-handle"&gt;@CoachTreMayne&lt;/div&gt;&lt;div class="pay-cta"&gt;Tap to Pay&lt;/div&gt;&lt;/a&gt;</p>
+<p class="p1">    &lt;/div&gt;</p>
+<p class="p1">    &lt;div class="pay-note"&gt;💡 &lt;strong&gt;Note:&lt;/strong&gt; Always include your full name and program in the payment note. You'll receive onboarding details within 24 hours.&lt;/div&gt;</p>
+<p class="p1">  &lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="cta-banner"&gt;</p>
+<p class="p1">  &lt;h2&gt;Stop Waiting.&lt;br&gt;&lt;span class="gold"&gt;Start Moving.&lt;/span&gt;&lt;/h2&gt;</p>
+<p class="p1">  &lt;div class="gold-line" style="margin:16px auto;"&gt;&lt;/div&gt;</p>
+<p class="p1">  &lt;p&gt;Your first step is free. Book a 20-minute discovery call and let's map out your transformation.&lt;/p&gt;</p>
+<p class="p1">  &lt;div class="cta-btns"&gt;</p>
+<p class="p1">    &lt;a href="https://linktr.ee/CoachTreMayne" target="_blank"&gt;&lt;button class="btn-primary"&gt;Book Free Call&lt;/button&gt;&lt;/a&gt;</p>
+<p class="p1">    &lt;button class="btn-outline" onclick="document.getElementById('ai-tool').scrollIntoView({behavior:'smooth'})"&gt;Try AI Coach&lt;/button&gt;</p>
+<p class="p1">  &lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1">  &lt;div class="nav-logo"&gt;</p>
+<p class="p1">    &lt;div class="nav-icon" style="width:28px;height:28px;font-size:13px;"&gt;⚡&lt;/div&gt;</p>
+<p class="p1">    &lt;div class="nav-brand" style="font-size:14px;"&gt;Coach &lt;span&gt;TreMayne&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1">  &lt;/div&gt;</p>
+<p class="p1">  &lt;div class="footer-links"&gt;</p>
+<p class="p1">    &lt;a href="https://linktr.ee/CoachTreMayne" target="_blank"&gt;Linktree&lt;/a&gt;</p>
+<p class="p1">    &lt;a href="https://cash.app/$CoachTreMayne" target="_blank"&gt;Cash App&lt;/a&gt;</p>
+<p class="p1">    &lt;a href="https://venmo.com/CoachTreMayne" target="_blank"&gt;Venmo&lt;/a&gt;</p>
+<p class="p1">    &lt;a href="https://coachtremayneo7.github.io" target="_blank"&gt;Sales Page&lt;/a&gt;</p>
+<p class="p1">  &lt;/div&gt;</p>
+<p class="p1">  &lt;div class="footer-copy"&gt;© 2026 Coach TreMayne&lt;/div&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">const SYSTEM_PROMPTS = {</p>
+<p class="p1">  workout: `You are Coach TreMayne, an elite online fitness and travel coach for busy professionals 40+. Generate a personalized workout plan with: motivational intro, workout name &amp; goal, warm-up, main workout (sets/reps/rest), cool-down, closing note signed "— Coach TreMayne". Be practical, energetic, results-focused.`,</p>
+<p class="p1">  qa: `You are Coach TreMayne, online fitness and travel coach for busy professionals 40+. Answer questions about fitness, nutrition, travel workouts, or coaching. Be direct and motivating. Encourage booking a discovery call at linktr.ee/CoachTreMayne for personalized help.`,</p>
+<p class="p1">  onboard: `You are Coach TreMayne's AI onboarding assistant. Welcome new clients and gather: 1) Primary fitness goal, 2) Current fitness level, 3) Days/week to train, 4) Injuries or limitations, 5) Travel frequency. After gathering info, summarize and say to book a free discovery call at linktr.ee/CoachTreMayne.`,</p>
+<p class="p1">  content: `You are Coach TreMayne's social media assistant for fitness and travel coaching targeting professionals 40+. Generate: scroll-stopping hook, 3-5 sentence caption, CTA to link in bio or DM TRAVEL, and 10-15 hashtags. Voice: bold, authentic, aspirational.`</p>
+<p class="p1">};</p>
+<p class="p2"><br></p>
+<p class="p1">const PLACEHOLDERS = {</p>
+<p class="p1">  workout: "e.g. Full body, no equipment, 30 mins, intermediate...",</p>
+<p class="p1">  qa: "Ask anything about fitness, nutrition, or travel training...",</p>
+<p class="p1">  onboard: "Type 'Start' to begin your client onboarding...",</p>
+<p class="p1">  content: "e.g. Post about staying fit while traveling for work..."</p>
+<p class="p1">};</p>
+<p class="p2"><br></p>
+<p class="p1">const EMPTY_TEXT = {</p>
+<p class="p1">  workout: "Describe your goal, equipment, time &amp; level",</p>
+<p class="p1">  qa: "Ask anything about fitness, nutrition, or travel training",</p>
+<p class="p1">  onboard: "Type 'Start' to begin your client onboarding",</p>
+<p class="p1">  content: "Give me a topic and I'll write your Instagram caption"</p>
+<p class="p1">};</p>
+<p class="p2"><br></p>
+<p class="p1">const EMPTY_ICONS = { workout: "🏋️", qa: "💬", onboard: "🚀", content: "📲" };</p>
+<p class="p2"><br></p>
+<p class="p1">let currentMode = "workout";</p>
+<p class="p1">let history = [];</p>
+<p class="p1">let loading = false;</p>
+<p class="p2"><br></p>
+<p class="p1">function setMode(mode, btn) {</p>
+<p class="p1">  currentMode = mode;</p>
+<p class="p1">  document.querySelectorAll(".mode-tab").forEach(t =&gt; t.classList.remove("active"));</p>
+<p class="p1">  btn.classList.add("active");</p>
+<p class="p1">  document.getElementById("chat-input").placeholder = PLACEHOLDERS[mode];</p>
+<p class="p1">  clearChat();</p>
+<p class="p1">  history = [];</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function clearChat() {</p>
+<p class="p1">  const area = document.getElementById("chat-area");</p>
+<p class="p1">  area.innerHTML = `&lt;div class="chat-empty" id="chat-empty"&gt;&lt;div class="empty-icon"&gt;${EMPTY_ICONS[currentMode]}&lt;/div&gt;&lt;p&gt;${EMPTY_TEXT[currentMode]}&lt;/p&gt;&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function removeEmpty() {</p>
+<p class="p1">  const e = document.getElementById("chat-empty");</p>
+<p class="p1">  if (e) e.remove();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function addMsg(role, text) {</p>
+<p class="p1">  removeEmpty();</p>
+<p class="p1">  const area = document.getElementById("chat-area");</p>
+<p class="p1">  const div = document.createElement("div");</p>
+<p class="p1">  div.className = `msg ${role}`;</p>
+<p class="p1">  if (role === "ai") {</p>
+<p class="p1">    div.innerHTML = `&lt;div class="ai-avatar"&gt;⚡&lt;/div&gt;&lt;div class="msg-bubble"&gt;${text}&lt;/div&gt;`;</p>
+<p class="p1">  } else {</p>
+<p class="p1">    div.innerHTML = `&lt;div class="msg-bubble"&gt;${text}&lt;/div&gt;`;</p>
+<p class="p1">  }</p>
+<p class="p1">  area.appendChild(div);</p>
+<p class="p1">  area.scrollTop = area.scrollHeight;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function showTyping() {</p>
+<p class="p1">  removeEmpty();</p>
+<p class="p1">  const area = document.getElementById("chat-area");</p>
+<p class="p1">  const div = document.createElement("div");</p>
+<p class="p1">  div.className = "msg ai";</p>
+<p class="p1">  div.id = "typing-indicator";</p>
+<p class="p1">  div.innerHTML = `&lt;div class="ai-avatar"&gt;⚡&lt;/div&gt;&lt;div class="typing-bubble"&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;/div&gt;`;</p>
+<p class="p1">  area.appendChild(div);</p>
+<p class="p1">  area.scrollTop = area.scrollHeight;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function removeTyping() {</p>
+<p class="p1">  const t = document.getElementById("typing-indicator");</p>
+<p class="p1">  if (t) t.remove();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">const input = document.getElementById("chat-input");</p>
+<p class="p1">const sendBtn = document.getElementById("send-btn");</p>
+<p class="p2"><br></p>
+<p class="p1">input.addEventListener("input", () =&gt; { sendBtn.disabled = !input.value.trim() || loading; });</p>
+<p class="p1">input.addEventListener("keydown", (e) =&gt; { if (e.key === "Enter" &amp;&amp; !e.shiftKey) { e.preventDefault(); sendMessage(); } });</p>
+<p class="p2"><br></p>
+<p class="p1">async function sendMessage() {</p>
+<p class="p1">  if (!input.value.trim() || loading) return;</p>
+<p class="p1">  const text = input.value.trim();</p>
+<p class="p1">  input.value = "";</p>
+<p class="p1">  sendBtn.disabled = true;</p>
+<p class="p1">  loading = true;</p>
+<p class="p2"><br></p>
+<p class="p1">  addMsg("user", text);</p>
+<p class="p1">  history.push({ role: "user", content: text });</p>
+<p class="p1">  showTyping();</p>
+<p class="p2"><br></p>
+<p class="p1">  try {</p>
+<p class="p1">    const res = await fetch("https://coach-tremayne-api.quantumflexpt.workers.dev", {</p>
+<p class="p1">      method: "POST",</p>
+<p class="p1">      headers: {</p>
+<p class="p1">        "Content-Type": "application/json",</p>
+<p class="p1">        </p>
+<p class="p1">        </p>
+<p class="p1">        </p>
+<p class="p1">      },</p>
+<p class="p1">      body: JSON.stringify({</p>
+<p class="p1">        model: "claude-sonnet-4-20250514",</p>
+<p class="p1">        max_tokens: 1000,</p>
+<p class="p1">        system: SYSTEM_PROMPTS[currentMode],</p>
+<p class="p1">        messages: history</p>
+<p class="p1">      })</p>
+<p class="p1">    });</p>
+<p class="p1">    const data = await res.json();</p>
+<p class="p1">    const reply = data.content?.map(b =&gt; b.text || "").join("\n") || "Something went wrong. Please try again.";</p>
+<p class="p1">    history.push({ role: "assistant", content: reply });</p>
+<p class="p1">    removeTyping();</p>
+<p class="p1">    addMsg("ai", reply);</p>
+<p class="p1">  } catch(e) {</p>
+<p class="p1">    removeTyping();</p>
+<p class="p1">    addMsg("ai", "Something went wrong. Please try again.");</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  loading = false;</p>
+<p class="p1">  sendBtn.disabled = !input.value.trim();</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
